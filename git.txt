@@ -24,4 +24,6 @@ git status				查看当前目录git状态
 7、git管理的是修改而不是文件。每次修改如果不add到暂存区，是不会被commit到分支中的。
 
 8、撤销修改：
-
+git checkout -- "filename"	撤销修改
+1）修改后未add至暂存区，执行此指令，会取消工作区的修改
+2）
