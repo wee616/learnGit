@@ -8,3 +8,7 @@ git commit -m "提交描述"
 查看历史记录：
 git log					查看历史记录
 git log --pretty=oneline单行显示历史记录，界面更友好
+
+回退：
+git reset --hard "commit id"	将head指向指定的分支，同时将工作空间更新为最新的
+git reflog				查看历史操作记录
