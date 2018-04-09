@@ -1,14 +1,27 @@
-创建版本库：
+1、创建版本库：
 git init				创建版本库
 
-将文件提交到仓库：
-git add 文件名			将文件添加到仓库中	
-git commit -m "提交描述"
-
-查看历史记录：
+2、将文件提交到仓库：
+git add 文件名			将文件添加到仓库中	（将文件提交到暂存区）
+git commit -m "提交描述"					（将暂存区内容提交到当前分支）
+3、查看历史记录：
 git log					查看历史记录
 git log --pretty=oneline单行显示历史记录，界面更友好
 
-回退：
-git reset --hard "commit id"	将head指向指定的分支，同时将工作空间更新为最新的
+4、回退：
+git reset --hard "commit id"	将head指向指定的分支，同时将工作区更新为最新的
 git reflog				查看历史操作记录
+
+5、工作区与暂存区
+工作区：电脑看到的目录。
+版本库：.git目录。
+暂存区：stage
+git add指令是将文件修改提交到暂存区，用commit指令将暂存区内容一次提交到分支。
+
+6、查看当前目录git状态：
+git status				查看当前目录git状态
+
+7、git管理的是修改而不是文件。每次修改如果不add到暂存区，是不会被commit到分支中的。
+
+8、撤销修改：
+
