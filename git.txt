@@ -39,3 +39,9 @@ git commit -m "reason"
 2）配置sshkey，用git指令输入ssh-keygen -t rsa -C "youremail@example.com"，在c盘->用户->自己的用户名->.ssh目录下有id_rsa.pub，文本贴到github中的sshkey中。
 github识别到公钥后，可以确认身份。
 
+11、本地项目关联到远程
+1）添加远程库，在GitHub中new一个
+2）将本地工程关联到远程并推送
+git remote add origin https://github.com/wee616/learnGit.git
+git push -u origin master
+
