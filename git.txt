@@ -29,3 +29,6 @@ git checkout -- "filename"	撤销修改(撤销工作区)
 2）修改后add至缓存区，又做了修改，执行此指令，会取消后一次的修改，缓存区文件仍然在。
 git reset head "filename" 撤销修改(撤销缓存区)
 
+9、删除文件：
+git rm "filename"	(删除动作提交至缓存区)
+git commit -m "reason"
