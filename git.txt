@@ -5,4 +5,6 @@ git init				创建版本库
 git add 文件名			将文件添加到仓库中	
 git commit -m "提交描述"
 
--- 测试回退
+查看历史记录：
+git log					查看历史记录
+git log --pretty=oneline单行显示历史记录，界面更友好
