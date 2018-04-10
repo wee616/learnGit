@@ -7,6 +7,7 @@ git commit -m "提交描述"					（将暂存区内容提交到当前分支）
 3、查看历史记录：
 git log					查看历史记录
 git log --pretty=oneline单行显示历史记录，界面更友好
+git log --graph
 
 4、回退：
 git reset --hard "commit id"	将head指向指定的分支，同时将工作区更新为最新的
@@ -49,15 +50,17 @@ git push -u origin master										将本地代码推送到远程
 12、从远程库克隆到本地
 git clone https://github.com/wee616/learnGit.git
 
-13、创建分支
+13、分支管理
 git checkout -b dev 创建一个名为dev的分支，并切换到此分支
 git branch 查看分支
 git branch "branchname" 创建名为branchname的分支
 git checkout "branchname" 切换到名为branchname的分支
 git merge dev 合并当前分支：如要把dev合并到master上，先切换到master分支，然后执行merge指令
+如果有冲突，需要先解决冲突，再add commit
 git branch -d "branchname" 删除分支
+git merge --no-ff -m "描述" dev	加上--no--ff表示普通模式合并，可以看到分支信息
 
-
-
--- 分支冲突修改测试
-
+14、分支管理策略
+master作为稳定版本平常不做修改，用做版本发布
+dev分支作为平常工作的分支
+每个人本地有自己的分支
