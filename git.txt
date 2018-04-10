@@ -46,4 +46,12 @@ git remote add origin https://github.com/wee616/learnGit.git	关联远程库
 git push -u origin master										将本地代码推送到远程
 以后每次推送到远程，执行git push origin master 即可
 
+12、从远程库克隆到本地
+git clone https://github.com/wee616/learnGit.git
+
+13、创建分支
+git checkout -b dev 创建一个名为dev的分支，并切换到此分支
+git branch 查看分支
+git merge dev 将dev分支合并到主干上
+
 
