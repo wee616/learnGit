@@ -58,3 +58,4 @@ git merge dev 合并当前分支：如要把dev合并到master上，先切换到
 git branch -d "branchname" 删除分支
 
 
+-- 分支冲突修改测试(分支2)
