@@ -52,6 +52,9 @@ git clone https://github.com/wee616/learnGit.git
 13、创建分支
 git checkout -b dev 创建一个名为dev的分支，并切换到此分支
 git branch 查看分支
-git merge dev 将dev分支合并到主干上
+git branch "branchname" 创建名为branchname的分支
+git checkout "branchname" 切换到名为branchname的分支
+git merge dev 合并当前分支：如要把dev合并到master上，先切换到master分支，然后执行merge指令
+git branch -d "branchname" 删除分支
 
 
