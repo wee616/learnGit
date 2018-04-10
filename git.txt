@@ -44,4 +44,6 @@ github识别到公钥后，可以确认身份。
 2）将本地工程关联到远程并推送
 git remote add origin https://github.com/wee616/learnGit.git	关联远程库
 git push -u origin master										将本地代码推送到远程
+以后每次推送到远程，执行git push origin master 即可
+
 
