@@ -39,6 +39,8 @@ git commit -m "reason"
 1）注册github
 2）配置sshkey，用git指令输入ssh-keygen -t rsa -C "youremail@example.com"，在c盘->用户->自己的用户名->.ssh目录下有id_rsa.pub，文本贴到github中的sshkey中。
 github识别到公钥后，可以确认身份。
+开源项目，点击fork就可以在自己的账号下克隆出来。然后从自己账号下clone，这样就有权限提交修改了。
+git clone https://github.com/wee616/learnGit.git 从远程库克隆到本地
 
 11、本地项目关联到远程
 1）添加远程库，在GitHub中new一个
@@ -46,9 +48,6 @@ github识别到公钥后，可以确认身份。
 git remote add origin https://github.com/wee616/learnGit.git	关联远程库
 git push -u origin master										将本地代码推送到远程
 以后每次推送到远程，执行git push origin master 即可
-
-12、从远程库克隆到本地
-git clone https://github.com/wee616/learnGit.git
 
 13、分支管理
 git checkout -b dev 创建一个名为dev的分支，并切换到此分支
@@ -64,3 +63,35 @@ git merge --no-ff -m "描述" dev	加上--no--ff表示普通模式合并，可�
 master作为稳定版本平常不做修改，用做版本发布
 dev分支作为平常工作的分支
 每个人本地有自己的分支
+
+15、工作区临时隐匿
+如果工作区内容不方便提交，可以先隐匿掉，隐匿的文件可以恢复。
+git stash 隐匿当前未add到暂存区的工作区修改。
+git stash list 查看隐匿的列表
+git stash apply 恢复stash到工作区，恢复后stash不会删除，执行 git stash drop进行删除。
+git stash pop 恢复的同时删除stash
+
+16、合并远程分支
+git pull
+
+17、标签
+tag是版本库的快照，实际是指向某个commit的指针，tag是不可移动的
+git tag <name> 用于创建新的tag,默认head，可以指定commit id
+git tag 查看所有标签
+git tag -a <tgname> -m "描述" 创建带描述的标签
+git push origin <tgname> 可以推送一个本地标签
+git push origin --tags 推送全部未推送的本地标签
+git tag -d <tgname> 可以删除一个本地标签
+git push origin :refs/tags/<tgname> 可以删除一个远程标签
+
+18、忽略特殊文件
+新建.gitignore文件，将需要忽略的文件名添加进去
+gitignore可以配置规则，如果想强制添加某个文件到git,可以用git add -f <filename>
+可以用git check-ignore -v <filename> 校验是哪个规则在起作用。
+.gitignore文件需要放到版本库中。
+
+19、给指令配置别名
+git config --global alias.st status  意思是用st代替status
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+20、搭建git服务器
