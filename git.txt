@@ -42,6 +42,6 @@ github识别到公钥后，可以确认身份。
 11、本地项目关联到远程
 1）添加远程库，在GitHub中new一个
 2）将本地工程关联到远程并推送
-git remote add origin https://github.com/wee616/learnGit.git
-git push -u origin master
+git remote add origin https://github.com/wee616/learnGit.git	关联远程库
+git push -u origin master										将本地代码推送到远程
 
